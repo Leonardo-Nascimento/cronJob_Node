@@ -134,11 +134,8 @@ function buscaAniversariante(){
 	
 }
 
-cron.schedule("30 19 1-31 1-12 *", () => buscaAniversariante());
+cron.schedule("10 20 1-31 1-12 *", () => buscaAniversariante());
 
-export async function GET() {
-    return NextResponse.json({ Teste: true });
-}
 
 app.listen(3000);
 
