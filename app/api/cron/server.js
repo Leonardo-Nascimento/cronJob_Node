@@ -1,6 +1,7 @@
 const express = require('express')
 const cron = require("node-cron");
 const app = express();
+import { NextResponse } from 'next/server';
 
 
 const list = ['05/01  João Manoel De França Silva',
@@ -133,7 +134,11 @@ function buscaAniversariante(){
 	
 }
 
-cron.schedule("50 18 1-31 1-12 *", () => buscaAniversariante());
+cron.schedule("30 19 1-31 1-12 *", () => buscaAniversariante());
+
+export async function GET() {
+    return NextResponse.json({ Teste: true });
+}
 
 app.listen(3000);
 
