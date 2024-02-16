@@ -2,9 +2,6 @@
 // const cron = require("node-cron");
 // const app = express();
 
-export default function handler(req, res) {
-    res.status(200).end('Hello Cron!');
-  }
 
 
 // const list = ['05/01  João Manoel De França Silva',
@@ -102,8 +99,8 @@ export default function handler(req, res) {
 // '15/12  Chirleia Rodrigues de Almeida',
 // '15/12  Chirleia Rodrigues de Almeida',
 // '16/12  Francisca Elida Santos de Almeida',
-// '15/02 Filhinha',
-// '15/02 Felaozão',
+// '16/02 Filhinha',
+// '17/02 Felaozão',
 // ];
 
 
@@ -142,3 +139,11 @@ export default function handler(req, res) {
 
 // app.listen(3000);
 
+import { NextResponse } from "next/server"
+
+export async function GET() {
+    const result = "Helo, World! This is CRON route do LEO."
+
+    return NextResponse.json({ data: result })
+
+}
