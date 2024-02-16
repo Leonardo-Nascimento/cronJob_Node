@@ -1,11 +1,10 @@
 // const express = require('express')
 // const cron = require("node-cron");
 // const app = express();
-import { NextResponse } from 'next/server';
 
-export async function GET() {
-  return NextResponse.json({ ok: true });
-}
+export default function handler(req, res) {
+    res.status(200).end('Hello Cron!');
+  }
 
 
 // const list = ['05/01  João Manoel De França Silva',
