@@ -11,9 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vercel/node": "^3.0.19",
     "vercel": "^33.5.1"
   },
   "dependencies": {
+    "next": "^14.1.0",
     "node-cron": "^3.0.3",
     "xpress": "^2.4.6"
   }
